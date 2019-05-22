@@ -17,8 +17,8 @@
         <td><%= ticket_type.price %></td>
         <td><%= ticket_type.event.name %></td>
         <td><%= link_to 'Show', ticket_type %></td>
-        <td><%= link_to 'Edit', edit_ticket_type_path(ticket_type) %></td>
-        <td><%= link_to 'Destroy', ticket_type, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><% if can? :update, @ticket_type %><%= link_to 'Edit', edit_ticket_type_path(ticket_type) %><% end %></td>
+        <td><% if can? :destroy, @ticket_type %><%= link_to 'Destroy', ticket_type, method: :delete, data: { confirm: 'Are you sure?' } %><% end %></td>
       </tr>
     <% end %>
   </tbody>

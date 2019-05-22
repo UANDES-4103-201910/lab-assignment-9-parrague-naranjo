@@ -10,5 +10,7 @@
   <%= @ticket_type.event.name %>
 </p>
 
-<%= link_to 'Edit', edit_ticket_type_path(@ticket_type) %> |
+<% if can? :update, @ticket_type %>
+  <%= link_to 'Edit', edit_ticket_type_path(@ticket_type) %> |
+<% end %>
 <%= link_to 'Back', ticket_types_path %>

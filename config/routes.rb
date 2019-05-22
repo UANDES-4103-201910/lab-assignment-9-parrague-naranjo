@@ -10,7 +10,7 @@ Rails.application.routes.draw do
   resources :users
   resources :events
   resources :ticket_types
-
+  resources :shopings
   root :to => 'pages#home'
 
   post '/login',   to: 'sessions#create', as: :log_in
@@ -18,5 +18,7 @@ Rails.application.routes.draw do
 
   get '/sign_in' => 'registrations#new', as: :registrations
   post '/sign_in' => 'registrations#create', as: :sign_in
+
+  post '/shopings/new' => 'shoping#show'
 
 end

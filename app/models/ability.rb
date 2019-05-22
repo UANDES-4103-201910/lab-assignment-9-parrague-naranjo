@@ -10,7 +10,12 @@ class Ability
       can :create, :all
       can :destroy, :all
     else
-      can :read, :all
+      can :read, :ticket_type
+      can :read, :event
+      can :create, :ticket
+      cannot :read, :user
+      cannot :manage, :user
+
     end
     # Define abilities for the passed in user here. For example:
     #

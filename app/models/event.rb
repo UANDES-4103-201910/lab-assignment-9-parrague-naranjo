@@ -1,6 +1,7 @@
 class Event < ApplicationRecord
   belongs_to :place
   has_many :tickets
+  has_many :ticket_types
 
 
   validate :is_same_place

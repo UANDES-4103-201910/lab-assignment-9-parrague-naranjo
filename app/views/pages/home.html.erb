@@ -10,3 +10,7 @@
   <%= link_to "New Event", new_event_url %>
   <%= link_to "New Ticket", new_ticket_type_url %>
 <% end %>
+
+<% if can? :create, @user_ticket %>
+  <%= link_to "asdasd", new_shoping_url %>
+<% end %>

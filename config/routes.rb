@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :ticket_types
   devise_for :users
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 
@@ -8,6 +9,7 @@ Rails.application.routes.draw do
 
   resources :users
   resources :events
+  resources :ticket_types
 
   root :to => 'pages#home'
 

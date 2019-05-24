@@ -6,7 +6,7 @@ class Ticket < ApplicationRecord
   validates :price, numericality: {greater_than_or_equal_to: 0}
   validate :ticket_on_time_event
 
-
+  default_scope {where{active: true}}
 
   def ticket_on_time_event
     ev = Event.find(event.id)

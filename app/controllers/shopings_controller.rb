@@ -1,6 +1,8 @@
 class ShopingsController < ApplicationController
   before_action :set_shoping, only: [:show, :edit, :update, :destroy]
 
+  include Singleton
+  
   def whatever
 
   end
